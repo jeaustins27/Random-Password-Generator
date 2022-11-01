@@ -4,8 +4,8 @@ var upperC = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "
 var lowerC = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var special = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
-var finalPW = []
-
+var finalPW = ""  // the final password
+var Characters = [] // thats all the chosen characters concatinated together or joined together
 
 function generatePassword() {
     // userLength()
@@ -31,13 +31,34 @@ function generatePassword() {
     if (!pwUpperC && !pwLowerC && !pwNumbers && !pwSpecial) {
         alert("No specifications were selected. Please select at least one.");
         return "Try Again";
-    } else if (pwUpperC && pwLowerC && pwNumbers && pwSpecial) {
-        var Characters = upperC.concat(lowerC, numbers, special);
-        
+    } else {
 
+      if (pwUpperC) {
+        Characters = Characters.concat(upperC);
+        }
+        if (pwLowerC) {
+            Characters = Characters.concat(lowerC);
+            
+        }
+        if (pwNumbers) {
+            Characters = Characters.concat(numbers);
+            
+        }
+        if (pwSpecial) {
+            Characters = Characters.concat(special);
+
+        }
+        console.log(Characters);
+
+        for (var i = 0; i < pwLength; i++) {
+            finalPW = finalPW.concat(Characters[Math.floor(Math.random() * Characters.length)]);
+            console.log(finalPW);
+        }
+        Characters = [];
+        var password = finalPW;
+        finalPW = "";
+        return password;
     }
-    
-//   return "generated password";
 }
 
 // Write password to the #password input
