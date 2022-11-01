@@ -20,6 +20,7 @@ To use this webpage, simply click the "Generate Password" button. You will be pr
 
 - [W3 Schools](https://www.w3schools.com/)
 - [ReadME.so](https://readme.so)
+- [OWASP Special Characters](https://owasp.org/www-community/password-special-characters)
 
 ## License
 
