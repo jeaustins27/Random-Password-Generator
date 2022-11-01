@@ -33,30 +33,42 @@ function generatePassword() {
         return "Try Again";
     } else {
 
+        // if statement for selecting the Uppercase characters
       if (pwUpperC) {
         Characters = Characters.concat(upperC);
         }
+
+        // if statement for selecting the Lowercase characters
         if (pwLowerC) {
             Characters = Characters.concat(lowerC);
             
         }
+
+        // if statement for selecting the numbers
         if (pwNumbers) {
             Characters = Characters.concat(numbers);
             
         }
+
+        // if statement for selecting the special characters
         if (pwSpecial) {
             Characters = Characters.concat(special);
 
         }
+        // console logging the selected characters 
         console.log(Characters);
 
+        // created loop to randomize each character for the desired password length
         for (var i = 0; i < pwLength; i++) {
             finalPW = finalPW.concat(Characters[Math.floor(Math.random() * Characters.length)]);
             console.log(finalPW);
         }
+
+        // resets the function so it does not continue to add characters if you want to generate a new password without having to referesh the webpage
         Characters = [];
         var password = finalPW;
         finalPW = "";
+        // displays the randomly generated password
         return password;
     }
 }
