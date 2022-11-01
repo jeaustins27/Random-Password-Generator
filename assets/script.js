@@ -13,21 +13,21 @@ function generatePassword() {
     console.log(pwLength)
 
     if (pwLength < 8 || pwLength > 128) {
-        alert("Number entered was not within the specified requirements. Please try again.");
+        alert("Number entered was not within the specified requirements. Please try again."); // alerting you that the number entered was either lower than 8 or higher than 128
         return "Try Again"
     } else if (isNaN(pwLength)) {
-        alert("Value entered is not a number. Please try again.");
+        alert("Value entered is not a number. Please try again."); // alerting you that the value entered was not a number
         return "Try Again"
     } else
-    var pwUpperC = confirm("Would you like Upper Case letters in your password? OK = Yes CANCEL = NO");
-    console.log(pwUpperC)
-    var pwLowerC = confirm("Would you like Lower Case letters in your password? OK = Yes CANCEL = NO");
-    console.log(pwLowerC)
-    var pwNumbers = confirm("Would you like numbers in your password? OK = Yes CANCEL = NO");
-    console.log(pwNumbers)
-    var pwSpecial = confirm("Would you like special characters in your password? OK = Yes CANCEL = NO");
-    console.log(pwSpecial)
-
+    var pwUpperC = confirm("Would you like Upper Case letters in your password? OK = Yes CANCEL = NO"); // prompting you to choose if you would like upper case letters
+    console.log(pwUpperC) // console logging prompt for upper case letters
+    var pwLowerC = confirm("Would you like Lower Case letters in your password? OK = Yes CANCEL = NO"); // prompting you to choose if you would like lower case letters
+    console.log(pwLowerC) // console logging prompt for lower case letters
+    var pwNumbers = confirm("Would you like numbers in your password? OK = Yes CANCEL = NO"); // prompting you to choose if you would like numbers
+    console.log(pwNumbers) // console logging prompt for numbers
+    var pwSpecial = confirm("Would you like special characters in your password? OK = Yes CANCEL = NO"); // prompting you to choose if you would like special characters
+    console.log(pwSpecial) // console logging prompt for special characters
+// if statement that lets you know you need to select at least one category for your password
     if (!pwUpperC && !pwLowerC && !pwNumbers && !pwSpecial) {
         alert("No specifications were selected. Please select at least one.");
         return "Try Again";
