@@ -13,7 +13,7 @@ To use this webpage, simply click the "Generate Password" button. You will be pr
 
 ## 🔗 Project-Links
 
-- [Deployed Applocation](N/A)
+- [Deployed Applocation](https://jeaustins27.github.io/Random-Password-Generator/)
 - [GitHub Repo](https://github.com/jeaustins27/Random-Password-Generator)
 
 ## Credits
